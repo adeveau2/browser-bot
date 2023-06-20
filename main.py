@@ -11,6 +11,7 @@ from catbot import CatBot
 from concurrent_battle import ConcurrentBattleBot
 from echobot import EchoBot
 from langcatbot import LangCatBot
+from summary_bot import SummaryBot
 
 # Echo bot is a very simple bot that just echoes back the user's last message.
 bot = EchoBot()
@@ -38,7 +39,9 @@ bot = EchoBot()
 # Optionally add your Poe API key here. You can go to https://poe.com/create_bot?api=1 to generate
 # one. We strongly recommend adding this key for a production bot to prevent abuse,
 # but the starter example disables the key check for convenience.
-# POE_API_KEY = ""
-# app = make_app(bot, api_key=POE_API_KEY)
+POE_API_KEY = "3GBl5hutNyJBDZqEwWNMovTJMKGO6ht9"
+
+bot = SummaryBot()
+app = make_app(bot, api_key=POE_API_KEY)
 
 app = make_app(bot, allow_without_key=True)
